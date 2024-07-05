@@ -1,0 +1,38 @@
+.main-footer{
+    background: url(./../../assets/img/gmap.jpg) center/cover;
+    position: relative;
+    .main-footer-container{
+        transform: translateY(-50px);  
+        width: 60%; 
+        margin: 0 auto;
+
+        @media screen and (max-width:680px) {
+            transform: translateY(-21px);
+        }
+        .avatarchef{
+            background: $white1;
+            padding: 30px;
+            @include displaycolum;
+            position: relative;
+    
+            .chefcuisinière{
+                @include avatarchef ;
+                background: url(./../../assets/img/avatar-02.jpg)center/cover;
+                position: absolute;
+                top: 0;
+                transform: translateY(-33px);
+            }
+            p{
+                margin: 20px;
+                line-height: 24px;
+            }
+            h5{
+                font-size: 1em;
+            }
+            h4{
+                margin: 10px;
+            }
+    
+        }
+    }
+}

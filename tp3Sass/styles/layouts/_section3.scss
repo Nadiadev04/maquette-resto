@@ -1,0 +1,104 @@
+ // even
+ .sect3{
+    padding: 50px 20px 90px;
+    @media screen and (max-width:680px) {
+        display: none;
+    }
+    .even{
+        max-width: 1000px;
+        margin: 0 auto;
+        //  @include displaycolum ;
+    
+         h3{
+            @include h2titreorang ;
+         }
+         h4{
+            font-size: 2.5em;
+            color: $white1
+         }
+         .vaisselpng{
+            @include vaisselpic ;
+            margin: 10px auto;
+
+         }
+         .even-grid{
+            display: grid;
+            grid-template-columns: 58% 42%;
+            grid-template-rows: 1fr 1fr;
+            // padding: 22px;
+            // width: 100%;
+            grid-template-areas: 
+            "i1 i3"
+            "i2 i3";
+            gap: 20px;
+             ;
+    
+            .item{
+                display: grid;
+                grid-template-columns: 39% 61%;
+            }
+            .item1{
+                grid-area: i1;
+                .item-left{
+                     background: url(./../../assets/img/event-01.jpg) center/cover; 
+                }
+                @include itemeven ; 
+            }
+            .item2{
+                grid-area: i2;
+                .item-left{
+                    background: url(./../../assets/img/event-02.jpg) center/cover; 
+               }
+                @include itemeven ;
+            }
+            .item3{
+                grid-area: i3;
+                background: url(./../../assets/img/event-03.jpg) center/cover;
+                width: 84%;
+                // @include displaycolum; 
+                .item3-container{
+                    background: $white1;
+                    padding: 85px 20px;
+                    @include displaycolum;
+                    position: relative;
+                    margin:15px;
+                    .mois3{
+                        @include carrémois ;
+                        top: 0;
+                        transform: translateY(0%);
+                        left: 40%;
+                        margin-bottom: 15px;
+                        
+                        h4{
+                            font-size: 1.2em;
+                        }
+                        p{
+                            font-size: 0.8em;
+                        }
+                    }
+                    h5{
+                        font-size: 1em;
+                        color: #000000c0;
+                    }
+                    p{
+                        margin: 10px;
+                        color: #1111119a;
+                        font-size: 0.83em;
+                       
+                    }
+                    a{
+                        color: #111111;
+                        text-transform: uppercase;
+                        font-size: 0.8em;
+                        transition: 0.3s;
+                        margin-top: 35px;
+            
+                        &:hover{
+                           color: rgb(133, 133, 77);
+                        }
+                    }
+                }
+            }
+         }
+    }
+ }

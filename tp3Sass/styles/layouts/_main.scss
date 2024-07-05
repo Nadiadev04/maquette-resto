@@ -1,0 +1,163 @@
+
+    .main-header{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        background: $white1;
+        @media screen and (max-width: 690px) {
+            display: block;
+           }
+        .bloc-text{
+                padding: 20px 10px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                padding: 25px 0;
+                border: 1px dashed $Orange;
+                h2{
+                    @include h2titreorang;
+                }
+                .h3ourstor{
+                    font-size: 1.3em;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    margin-top: -8px;
+                }
+                .vpic{
+                    @include vaisselpic;
+                }
+                .pghebloctext{
+                    line-height: 24px;
+                    text-align: center;
+                    margin-bottom: 25px;
+
+                }
+                .chef1{
+                   .chefc1{
+                    background: url(./../../assets/img/avatar-01.jpg)center/cover; 
+                   @include avatarchef;
+                  margin: 0 auto;
+                   }
+                   h3{
+                    margin-top: 15px;
+                   }
+                   .surname{
+                    text-align: center;
+                    font-size: 0.85em;
+                    color: rgba(34, 33, 33, 0.548);
+                   }
+                   
+                }
+            
+        }
+        .bloc-image-main-header{
+            background: url(./../../assets/img/store-01.jpg) center/cover; min-height: 300px;
+        }
+    }
+
+    // main-container
+
+    .section1{ 
+        color: $white1;
+        padding-bottom: 100px;
+        position: relative;
+      
+        &:after {
+          content: "";
+          position: absolute;
+          height: 620px;
+          width: 100%;
+          background: url(./../../assets/img/bg-menu-01.jpg) center/cover;
+          left: 50%;
+          bottom: -330px;
+          transform: translate(-50%, -50%);
+        }
+                 
+                    >h3{
+                        @include h2titreorang;
+                        font-weight: 500;
+                        padding: 60px 0 30px;
+                    }
+                    .vaisselpng{
+                        @include vaisselpic;
+                            margin: 30px auto;
+                    }
+                   
+                        ul{
+                            @include navflex(space-around);
+                            width: 50%;
+                            margin: 30px auto;
+                            min-width: 500px;
+                           li{
+                            @include listyle;
+                            a{
+                                text-decoration: underline;
+                            }
+                           }
+                        }
+                
+                        .menu-grid-container{
+                            background: white;
+                            width: 85%;
+                            max-width: 800px;
+                            margin: 0 auto;
+                            border-top: 4px solid $Orange;
+                            padding: 15px 0;
+                            display: grid;
+                            grid-template-columns: 50% 50%;
+                            z-index: 1000;
+                            position: relative;
+                            
+                            @media screen and (max-width: 680px) {
+                                display: inline-block;
+                            }
+                           
+                            
+                            
+                                .plats{
+                                    display: grid;
+                                    grid-template-columns: 25% 60% 15%; 
+                                    border-bottom: 1px dashed rgba(128, 128, 128, 0.678);
+                                    padding: 30px 0;
+                                    margin: 0 20px;
+                                    align-items: center;
+                                    
+                                    
+                                        img{
+                                            border-radius: 50px;
+                                            object-fit: cover;
+                                            width: 100%;
+                                        }
+                                        .nom-plat{ 
+                                            text-align: left;
+                                            display: flex;
+                                            justify-content: center;
+                                            flex-direction: column;
+                                            margin: 0 10px;
+                                            
+                                            h3{
+                                               font-size: 0.8em; 
+                                               text-transform: uppercase;
+                                               color: $black1;
+                                               font-weight: bold;
+                                               margin-bottom: 5px;
+                                            }
+                                            > p{
+                                                font-weight: 100;
+                                                font-size: 1em;
+                                                height: 100%;
+                                                color: $black1;
+                                                // align-items: center;
+                                            }
+                                            
+                                        }
+                                        p{
+                                            color: $Orange;
+                                            font-size: 1.2em;
+                                        }
+                                    
+                                    
+                                }
+                    }
+            
+        }

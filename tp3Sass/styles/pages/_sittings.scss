@@ -1,0 +1,148 @@
+// reset
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+ 
+                     // variables
+
+@font-face {
+    font-family: "Allura";
+    src:  url(./../fonts/allura/Allura-Regular.ttf);
+}
+@font-face {
+    font-family: "poppins";
+    src: url(./../fonts/popins/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: "Roboto" ;
+    src: url(./../fonts/roboto/Roboto-Light.ttf);
+}
+// les fonts
+$font1: Allura , cursive;
+$font2: Poppins , serif;
+$font3: Roboto, serif;
+// les couleurs
+$white1:white;
+$gray: rgba(255, 255, 255, 0.61);
+$Orange:rgb(161, 121, 10);
+$black1: black ;
+$bgmain:rgba(17, 16, 16, 0.945);
+
+                                   // les mixin
+
+// pour les menu de la navbar de mon site je cree un style commun en utilisant les mexins pour simplifier mon code egalement pour pour mes titres qui se ressemble 
+
+
+@mixin displaycolum{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin navflex($space){
+    display: flex;
+        justify-content: $space;
+        align-items: center;
+}
+@mixin listyle{
+    text-transform: uppercase;
+    font-size: 0.9em;
+    &:hover{
+       cursor: pointer;
+    }
+    a{
+       color:$gray;
+       &:hover{
+        color: $white1;
+       } 
+
+    }
+}
+@mixin h2titreorang{
+    color: $Orange;
+    font-size: 1.6em;
+    font-family: $font1;
+}
+
+@mixin vaisselpic{
+    background: url(./../../assets/img/ic-plate.png) center/cover;
+            width: 33px;
+            height: 33px;
+            margin: 30px 0;
+}
+
+@mixin avatarchef{
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 1em rgb(209 206 206), 0 0 2em #eee;
+}
+
+@mixin carrémois{
+    width: 44px;
+    height: 44px;
+    background-color: $black1;
+    position: absolute;
+    text-align: center;
+    color: $white1 ;
+    bottom: 0;
+    left: 34%;
+    transform: translateY(-30px);
+}
+
+@mixin itemeven {
+    .item-left{
+        position: relative;
+        .mois{
+            @include carrémois ;
+            h4{
+                font-size: 1.2em;
+            }
+            p{
+                font-size: 0.8em;
+            }
+        }
+    }
+    .item-right{
+        color: $black1;
+        background: $white1;
+        padding: 39px;
+        h5{
+            font-size: 1em;
+            color: #000000c0;
+        }
+        p{
+            margin: 10px;
+            color: #1111119a;
+            font-size: 0.83em;
+           
+        }
+        a{
+            color: #111111;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            transition: 0.3s;
+
+            &:hover{
+               color: rgb(133, 133, 77);
+            }
+        }
+    }
+}
+
+     // styles generales
+body{
+    font-family: $font3;
+    text-align: center;
+    background: #000000e6;
+}
+
